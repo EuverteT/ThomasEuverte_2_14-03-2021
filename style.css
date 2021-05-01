@@ -1,0 +1,178 @@
+/*Cette page a été faite avec la technique mobile first*/
+/*La 1ière partie correspond aux propriétés communes à toutes les tailles d'écran*/
+/*Ensuite chaque partie entre les breakpoint est indiqué par un commentaire détaillant le media querie, du plus petit au plus grand*/
+
+/*** ALL SCREEN************************************************************************/
+
+body {
+  margin: 0;
+  font-size: 20px;
+  text-shadow: 0.01rem 0rem 0rem #deebff;
+  font-family: "Raleway", Arial, sans-serif;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+button,
+input {
+  margin: 0;
+}
+h1,
+h2,
+h3 {
+  font-weight: bold;
+}
+h1 {
+  font-size: 1.4rem;
+  margin: 0;
+}
+h2 {
+  font-size: 1.3rem;
+}
+h3 {
+  font-size: 1.1rem;
+  width: 100%;
+}
+img {
+  object-fit: cover;
+}
+/***PARTIE HEADER***/
+.header {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  font-size: 1rem;
+}
+.mobile-menu {
+  display: none;
+}
+.menu-item {
+  width: 33%;
+  text-align: center;
+  padding: 0.8rem;
+}
+.nav {
+  width: 30rem;
+}
+.menu {
+  display: flex;
+}
+.signup {
+  text-shadow: 0.01rem 0rem 0rem #deebff;
+  text-decoration: none;
+  color: #0065fc;
+  font-weight: bold;
+}
+.inactive:hover {
+  border-top: thin solid #0065fc;
+}
+header .active a {
+  color: #0065fc;
+}
+header a:hover {
+  color: #0065fc;
+}
+.active {
+  text-decoration: none;
+  text-shadow: 0.01rem 0rem 0rem #0065fc;
+  border-top: thin solid #0065fc;
+}
+.inactive {
+  text-shadow: 0.01rem 0rem 0rem #deebff;
+  border-top: thin solid #f2f2f2;
+}
+
+/*GENERAL CARD PROPERTIES*/
+.card {
+  background-color: white;
+  margin: 1rem 0rem 0.5rem 0rem;
+  box-shadow: 0.7rem 0.7rem 1rem rgb(224, 224, 224);
+  border-radius: 1rem;
+  padding: 0.3rem;
+  display: flex;
+  width: 335px;
+}
+
+/*** MEDIA QUERIES S*************************************************************************/
+@media (max-width: 700px) {
+  .header {
+    padding-top: 1.5rem;
+  }
+  .header img {
+    padding-left: 1.5rem;
+  }
+  .nav {
+    width: 7rem;
+  }
+  .menu .active,
+  .menu .inactive {
+    display: none;
+  }
+  .mobile-menu-container {
+    display: flex;
+  }
+  .mobile-menu .inactive:hover {
+    border-bottom: medium solid #0065fc;
+  }
+  .mobile-menu {
+    width: 100%;
+    display: initial;
+    margin: 1rem 0;
+  }
+  .mobile-menu .active {
+    border-top: none;
+    border-bottom: medium solid #0065fc;
+  }
+  .mobile-menu .inactive {
+    border-top: none;
+    border-bottom: medium solid #f2f2f2;
+  }
+  .mobile-menu ul li {
+    width: 50%;
+    font-size: 1rem;
+  }
+  .mobile-menu ul {
+    padding-left: 0rem;
+  }
+}
+
+/*** MEDIA QUERIES M*************************************************************************/
+@media all and (min-width: 700px) and (max-width: 1024px) {
+  .menu-item {
+    padding-top: 2rem;
+  }
+  .header img {
+    padding-left: 2rem;
+  }
+}
+
+/*** MEDIA QUERIES BOTH M AND L*************************************************************************/
+@media all and (min-width: 700px) {
+  .header img {
+    padding-top: 1.5rem;
+  }
+  .header {
+    margin-bottom: 3rem;
+  }
+}
+
+/*** MEDIA QUERIES L*************************************************************************/
+@media all and (min-width: 1024px) {
+.menu-item {
+  padding-top: 4rem;
+}
+.header img {
+  padding-left: 3rem;
+}
+
+}
+
+@media all and (min-width: 1300px) {
+}
