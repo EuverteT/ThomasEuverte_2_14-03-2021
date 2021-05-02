@@ -2,7 +2,7 @@
 /*La 1ière partie correspond aux propriétés communes à toutes les tailles d'écran*/
 /*Ensuite chaque partie entre les breakpoint est indiqué par un commentaire détaillant le media querie, du plus petit au plus grand*/
 
-/*** ALL SCREEN************************************************************************/
+/*** ALL SCREEN ATTRIBUTES************************************************************************/
 
 body {
   margin: 0;
@@ -31,6 +31,7 @@ h3 {
 h1 {
   font-size: 1.4rem;
   margin: 0;
+  width: 100%
 }
 h2 {
   font-size: 1.3rem;
@@ -42,12 +43,15 @@ h3 {
 img {
   object-fit: cover;
 }
-/***PARTIE HEADER***/
+section {
+  display: flex;
+  flex-wrap: wrap;
+}
+/***HEADER PART ATTRIBUTES***/
 .header {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  align-items: center;
   font-size: 1rem;
 }
 .mobile-menu {
@@ -89,7 +93,7 @@ header a:hover {
   border-top: thin solid #f2f2f2;
 }
 
-/*GENERAL CARD PROPERTIES*/
+/***GLOBAL CARDS ATTRIBUTES***/
 .card {
   background-color: white;
   margin: 1rem 0rem 0.5rem 0rem;
@@ -99,9 +103,189 @@ header a:hover {
   display: flex;
   width: 335px;
 }
+.card:hover {
+  border-color: #deebff;
+  border-style: double;
+  box-shadow: 1rem 1rem 1rem rgb(224, 224, 224);
+}
+.card-description {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+.card-description-item em {
+  font-weight: bold;
+  font-style: normal;
+}
+.fas.fa-star {
+  font-size: 12px;
+  background-color: white;
+  padding: 0;
+  margin: -0.15rem;
+}
+/***GLOBAL ICONS ATTRIBUTES***/
+.fas {
+  color: #0065fc;
+  font-size: 1.2rem;
+}
+.grey {
+  color: rgb(224, 224, 224);
+}
+/***FORM PART ATTRIBUTES***/
+section.search p {
+  font-weight: 400;
+  font-size: 1rem;
+  width: 100%;
+  padding: 0;
+}
+.form {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  margin: 1.5rem 0;
+}
+.map-container {
+  width: 50px;
+  height: 50px;
+}
+.map-circle {
+  background-color: #f2f2f2;
+  border-radius: 1rem 0 0 1rem;
+  width: 100%;
+  height: 100%;
+}
+.container-icon {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.fas.fa-map-marker-alt {
+  font-size: 1.1rem;
+  color: black;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+input {
+  color: black;
+  font-size: 1rem;
+  text-shadow: 0.4px 0.4px 0.3px black;
+  font-weight: 500;
+  line-height: 44px;
+  border-style: solid none;
+  border-color:  #f2f2f2;
+  border-width: 1px;
+  padding-left: 1rem;
+}
+.search-container {
+  position: absolute;
+  left: 305px;
+}
+.search-container-icon {
+  background-color: #0065fc;
+  border-style: none;
+  border-radius: 1.1rem;
+  width: 50px;
+  height: 50px;
+  position: relative;
+}
+.fas.fa-search {
+  color: #deebff;
+  font-size: 1rem;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.search-button.text
+{
+  display: none;
+}
+
+/***FILTERS PART ATTRIBUTES***/
+.filter-title {
+  font-weight: bold;
+  font-size: 1rem;
+  width: 100%;
+  display: inline-flex; /*UTILE?*/
+  align-items: center; /*UTILE?*/
+}
+.filter-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+.filter-container-item {
+  font-size: 1rem;
+  margin: 0.5rem -1rem 0.5rem 0; /*FAUX!*/
+  padding-left: 0rem; /*FAUX!*/
+  display: flex;
+  align-items: center;
+}
+.filter-icon-circle {
+  border-radius: 100%;
+  height: 3.1rem; /*FAUX!*/
+  width: 3.1rem;
+  background-color: #deebff;
+}
+
+.filter-container .fas {
+  position: relative;
+  left: 0.8rem; /*FAUX!*/
+  top: 0.8rem;
+}
+.fa-child {
+  padding-left: 0.2rem; /*A VERIF*/
+}
+.filter-text {  /*FAUX!*/
+  padding: 0.8rem 1rem 0.9rem 2rem;
+  font-weight: 700;
+  border: 2px rgb(224, 224, 224) solid;
+  border-left: none;
+  border-top-right-radius: 3rem;
+  border-bottom-right-radius: 3rem;
+  position: relative;
+  left: -21px;
+}
+.filter-text:hover {
+  text-shadow: 1px 1px 1px;
+  text-decoration: underline;
+  color: #0065fc;
+  transform: scale(1.05);
+  transition: transform 1s, color 3.5s;
+  cursor: pointer;
+}
+/* .circle {
+  border: thin rgb(224, 224, 224) solid;
+  border-radius: 100%;
+  height: 1.3rem;
+  width: 1.3rem;
+} */
+i.fas.fa-info {
+  background-color: white;
+  font-size: 0.7rem;
+  padding: 0;
+  position: relative;
+  left: 8px;
+  bottom: 3px;
+}
+.filter-footer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+}
+.filter-footer-item:nth-child(1) {
+  margin: 0 0.5rem 0.5rem 0.5rem;
+}
 
 /*** MEDIA QUERIES S*************************************************************************/
 @media (max-width: 700px) {
+  .section {
+    padding: 1rem;
+  }
   .header {
     padding-top: 1.5rem;
   }
@@ -115,16 +299,20 @@ header a:hover {
   .menu .inactive {
     display: none;
   }
-  .mobile-menu-container {
-    display: flex;
-  }
-  .mobile-menu .inactive:hover {
-    border-bottom: medium solid #0065fc;
+  .menu .menu-item {
+    width: 100%;
   }
   .mobile-menu {
     width: 100%;
     display: initial;
     margin: 1rem 0;
+  }
+  .mobile-menu-container {
+    display: flex;
+  }
+  .mobile-menu .menu-item {
+    width: 50%;
+    font-size: 1rem;
   }
   .mobile-menu .active {
     border-top: none;
@@ -134,13 +322,10 @@ header a:hover {
     border-top: none;
     border-bottom: medium solid #f2f2f2;
   }
-  .mobile-menu ul li {
-    width: 50%;
-    font-size: 1rem;
+  .mobile-menu .inactive:hover {
+    border-bottom: medium solid #0065fc;
   }
-  .mobile-menu ul {
-    padding-left: 0rem;
-  }
+
 }
 
 /*** MEDIA QUERIES M*************************************************************************/
@@ -150,14 +335,12 @@ header a:hover {
   }
   .header img {
     padding-left: 2rem;
+    padding-top: 1.5rem;
   }
 }
 
 /*** MEDIA QUERIES BOTH M AND L*************************************************************************/
 @media all and (min-width: 700px) {
-  .header img {
-    padding-top: 1.5rem;
-  }
   .header {
     margin-bottom: 3rem;
   }
@@ -166,10 +349,11 @@ header a:hover {
 /*** MEDIA QUERIES L*************************************************************************/
 @media all and (min-width: 1024px) {
 .menu-item {
-  padding-top: 4rem;
+  padding-top: 3rem;
 }
 .header img {
   padding-left: 3rem;
+  padding-top: 3rem;
 }
 
 }
