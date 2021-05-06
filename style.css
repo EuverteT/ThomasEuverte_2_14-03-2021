@@ -59,6 +59,12 @@ img {
   flex-wrap: wrap;
   font-size: 1rem;
 }
+.nav {
+  width: 30rem;
+}
+.menu {
+  display: flex;
+}
 .mobile-menu {
   display: none;
 }
@@ -67,23 +73,11 @@ img {
   text-align: center;
   padding: 0.8rem;
 }
-.nav {
-  width: 30rem;
-}
-.menu {
-  display: flex;
-}
 .signup {
   text-shadow: 0.01rem 0rem 0rem #deebff;
   text-decoration: none;
   color: #0065fc;
   font-weight: bold;
-}
-.inactive:hover {
-  border-top: thin solid #0065fc;
-}
-header .active a {
-  color: #0065fc;
 }
 header a:hover {
   color: #0065fc;
@@ -93,11 +87,16 @@ header a:hover {
   text-shadow: 0.01rem 0rem 0rem #0065fc;
   border-top: thin solid #0065fc;
 }
+header .active a {
+  color: #0065fc;
+}
 .inactive {
   text-shadow: 0.01rem 0rem 0rem #deebff;
   border-top: thin solid #f2f2f2;
 }
-
+.inactive:hover {
+  border-top: thin solid #0065fc;
+}
 /***GLOBAL CARDS ATTRIBUTES***/
 .card {
   background-color: white;
@@ -383,7 +382,6 @@ i.fas.fa-info {
 }
 .activity .card {
   flex-direction: column;
-  justify-content: space-between;
   padding: 0;
 }
 .activity img.card-item {
@@ -395,8 +393,27 @@ i.fas.fa-info {
   padding: 1rem;
   font-weight: bold;
 }
+/*FOOTER*/
+.footer {
+  background-color: #f2f2f2;
+  width: 100%;
+  margin-top: 2rem;
+}
+.footer li {
+  margin: 0.4rem 0;
+}
+.link4 {
+  font-size: 1rem;
+  font-weight: 300;
+}
+.link4:hover {
+  color: #0065fc;
+}
 /*** MEDIA QUERIES S*************************************************************************/
 @media (max-width: 700px) {
+  .card {
+    width: 95%;
+  }
   .section {
     padding: 1rem;
   }
@@ -445,7 +462,15 @@ i.fas.fa-info {
   .activity {
     align-items: center;
   }
-  
+  .footer-item:nth-child(1) {
+    padding: 2rem 2rem 1.1rem 2rem;
+  }
+  .footer-item:nth-child(2) {
+    padding: 0 2rem;
+  }
+  .footer-item:nth-child(3) {
+    padding: 1.7rem 2rem 2.3rem 2rem;
+  }
 }
 
 /*** MEDIA QUERIES M*************************************************************************/
@@ -459,6 +484,9 @@ i.fas.fa-info {
   }
   section {
     padding: 1rem 2rem 2rem 2rem;
+  }
+  .footer-item {
+    padding: 1.5rem;
   }
 }
 @media all and (min-width: 700px) and (max-width: 1300px) {
@@ -499,6 +527,13 @@ i.fas.fa-info {
   .tablet-grey-mode {
     background-color: #f2f2f2;
     padding: 2rem;
+  }
+  footer {
+    display: flex;
+    justify-content: space-between;
+  }
+  .footer-item {
+    width: 33%;
   }
 }
 
@@ -543,6 +578,9 @@ section {
 }
 .tablet-grey-mode {
   border-radius: 1.5rem;
+}
+.footer-item {
+  padding: 2rem 3rem 3rem 3rem;
 }
 }
 @media all and (min-width: 1300px) {
